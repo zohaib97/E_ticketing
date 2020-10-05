@@ -2,7 +2,7 @@
 include( "connection/connect.php" );
 session_start ();
 require_once('auth.php');
-if(@$_POST["sub"])
+if(isset($_POST["sub"]))
 {
     
     $fname=$_POST["fname"];

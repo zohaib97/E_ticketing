@@ -1,17 +1,21 @@
 <?php
-include( "connection/connect.php" );
 session_start ();
+session_regenerate_id();
+include( "connection/connect.php" );
+
 require_once('auth.php');
-if(@$_POST["sub"])
+if(isset($_POST["sub"]))
 {
     
-    $vname=$_POST["vname"];
-    $vno=$_POST["vno"];
-    $vimg=$_POST["vimg"];
-    
-    $query1=mysqli_query($con,"Select * from vehicle where  v_no='$vno'");
-    $num_row=mysqli_num_rows($query1);
-    if($num_row>0)
+    $vname=$_POST['vname'];
+    $vno=$_POST['vno'];
+    $vimg = $_FILES['vimg']['name']; 
+		$imagetmp = $_FILES['vimg']['tmp_name']; 
+	$uploadfile = move_uploaded_file($imagetmp,"image/".$vimg);
+    $query1=mysqli_query($con,"Select * from vehicle where v_no='$vno'");
+	$result=mysqli_fetch_array($query1);
+//    $num_row=mysqli_num_rows($query1);
+    if($result)
     {
         echo "<script>   alert ('This Vehicle No. Already Exist Please Provide Another Vehicle No.')</script>";
     }
@@ -102,7 +106,7 @@ include_once('header.php');
                 <h4>Vehicle Registration</h4>
               </div>
               <div class="card-body"> 
-          <form id="validateForm" method="post" >
+          <form id="validateForm" method="post" enctype="multipart/form-data" >
                   <div class="row">
                     <div class="form-group col-6">
                       <label for="vname">Vehicle Name</label>

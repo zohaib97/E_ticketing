@@ -1,11 +1,13 @@
 <?php
-include( "connection/connect.php" );
 session_start ();
+session_regenerate_id();
+include( "connection/connect.php" );
+
 require_once('auth.php');
 
-if(@$_GET["id"])
+if(isset($_GET["did"]))
 {
-	$id=$_GET["id"];
+	$id=$_GET["did"];
 	
 	$query=mysqli_query($con,"delete from vehicle where vid='$id'");
 	
@@ -18,6 +20,7 @@ if(@$_GET["id"])
 		echo "Error in your sql syntex..";
 	}
 }
+
 
 ?>
 
@@ -113,9 +116,10 @@ include_once('header.php');
                         <thead>
                           <tr>
                             <th>Serial No.</th>
+							  <th>Vehicle Image</th>
                             <th>Vehicle Name</th>
                             <th>Vehicle Number</th>
-                            <th>Vehicle Image</th>
+                            
                             
                             <th>Action</th>
                             
@@ -130,16 +134,17 @@ include_once('header.php');
                           <tr>
                            
                                   <td><?php echo $sn?></td>
+							   <td><img height="70" width="70" class="rounded rounded-circle" src="image/<?php echo $rows["v_img"]?>"></td>
                                   <td><?php echo $rows["name"]?></td>
                                   <td><?php echo $rows["v_no"]?></td>
-                                  <td><?php echo $rows["v_img"]?></td>
+                                 
                                   			
 				<td>
         <!-- <a href="viewbatch.php?q=<?php// echo $rows["Batchid"]?>"> -->
-        <p title="Edit" class="fa fa-edit" style="color: black"></p>
+       <a href="edit_vehicle.php?eid=<?php echo $rows['vid']?>"> <p title="Edit" class="fa fa-edit" style="color: black"></p></a>
       <!-- </a> -->
 				&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="viewvehicle.php?id=<?php echo $rows["vid"]?>"> <p title="Delete" class="fa fa-times-circle" style="color: black"></p></a>
+				<a href="viewvehicle.php?did=<?php echo $rows['vid']?>"> <p title="Delete" class="fa fa-times-circle" style="color: black"></p></a>
 				
 			</td>
                             <?php $sn++;}

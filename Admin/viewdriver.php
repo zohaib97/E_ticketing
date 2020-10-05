@@ -3,9 +3,9 @@ include( "connection/connect.php" );
 session_start ();
 require_once('auth.php');
 
-if(@$_GET["id"])
+if(isset($_GET["did"]))
 {
-	$id=$_GET["id"];
+	$id=$_GET["did"];
 	
 	$query=mysqli_query($con,"delete from driver where id='$id'");
 	
@@ -147,10 +147,10 @@ include_once('header.php');
                                                             					
 				<td>
         <!-- <a href="viewbatch.php?q=<?php// echo $rows["Batchid"]?>"> -->
-        <p title="Edit" class="fa fa-edit" style="color: black"></p>
+       <a href="edit_driver.php?eid=<?php echo $rows["id"]?>">  <p title="Edit" class="fa fa-edit" style="color: black"></p></a>
       <!-- </a> -->
 				&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="viewdriver.php?id=<?php echo $rows["id"]?>"> <p title="Delete" class="fa fa-times-circle" style="color: black"></p></a>
+				<a href="viewdriver.php?did=<?php echo $rows["id"]?>"> <p title="Delete" class="fa fa-times-circle" style="color: black"></p></a>
 				
 			</td>
                             <?php $sn++;}
