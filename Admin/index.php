@@ -131,17 +131,7 @@ include_once('header.php');
                       <select class="form-control" id="role" name="role" placeholder="Role">
 
                       <option>Select Role</option>
-					<?php
-					$query = mysqli_query( $con, "select * from role" );
-					while ( $rows = mysqli_fetch_array( $query ) ) {
-                      if($rows['role'] == 'user' || $rows['role'] == 'admin') { ?>
-					<option value="<?=$rows["id"]?>">
-						<?php echo $rows["role"]?>
-					</option>
-
-					<?php
-                    		}		}
-								?>
+				
 
                       </select>
                     </div>
@@ -200,8 +190,8 @@ include_once('header.php');
 					$query = mysqli_query( $con, "select * from role" );
 					while ( $rows = mysqli_fetch_array( $query ) ) {
                       if($rows['role'] == 'user' || $rows['role'] == 'admin') { ?>
-					<option value="<?=$rows["id"]?>">
-						<?php echo $rows["role"]?>
+					<option value="<?=$rows['rid']?>">
+						<?php echo $rows['role']?>
 					</option>
 
 					<?php
