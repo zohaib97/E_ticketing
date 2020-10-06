@@ -1,7 +1,7 @@
 <?php
 include( "connection/connect.php" );
 
-if(@$_POST["sub"])
+if(isset($_POST["sub"]))
 {
     
     $fname=$_POST["fname"];

@@ -7,11 +7,11 @@ if(isset($_GET["id"]))
 {
 	$id=$_GET["id"];
 	
-	$query=mysqli_query($con,"delete from user where id='$id'");
+	$query=mysqli_query($con,"delete from user_profile where id='$id'");
 	
 	if($query)
 	{
-		header("location:userview.php");
+		header("location:profileview.php");
 	}
 	else
 	{
@@ -29,7 +29,7 @@ if(isset($_GET["id"]))
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>User Registration</title>
+  <title>Profiles List</title>
   <!-- General CSS Files -->
   <link rel="stylesheet" href="assets/css/app.min.css">
   <!-- Template CSS -->
@@ -108,7 +108,7 @@ include_once('header.php');
               <div class="col-12">
                 <div class="card">
                   <div class="card-header">
-                    <h4>View User</h4>
+                    <h4>View Profiles</h4>
                   </div>
                   <div class="card-body">
                     <div class="table-responsive">
@@ -116,9 +116,12 @@ include_once('header.php');
                         <thead>
                           <tr>
                             <th>Serial No.</th>
+							   <th>Image</th>
                             <th>First Name</th>
                             <th>Last Name</th>
-                            <th>Email</th>
+                           <th>License No</th>
+							  <th>Contact No</th>
+							  <th>Address</th>
                            
                             <th>Role</th>
                             <th>Action</th>
@@ -128,24 +131,26 @@ include_once('header.php');
                         <tbody>
                         <?php
                             $sn=1;
-                            $query=mysqli_query($con,"select * from user  join role on user.role=role.rid");
+                            $query=mysqli_query($con,"select * from user_profile  join role on user_profile.rid=role.rid");
                             while($rows=mysqli_fetch_array($query))
                             { ?>
                           <tr>
                            
                                   <td><?php echo $sn?></td>
-                                  <td><?php echo $rows["fname"]?></td>
-                                  <td><?php echo $rows["lname"]?></td>
-                                  <td><?php echo $rows["email"]?></td>
-                                
-                                  <td><?php echo $rows["role"]?></td>
+							  <td><img src="image/<?php echo $rows['image']?>" height="70" width="70" class="rounded rounded-circle"></td>
+                                  <td><?php echo $rows["first_name"]?></td>
+                                  <td><?php echo $rows["last_name"]?></td>
+                                  <td><?php echo $rows["license_no"]?></td>
+							  <td><?php echo $rows["contact"]?></td>
+                                <td><?php echo $rows["address"]?></td>
+                                  <td><?php echo $rows["rid"]?></td>
                                                             					
 				<td>
-        <!-- <a href="viewbatch.php?q=<?php echo $rows["Batchid"]?>"> -->
-       <a href="edit_user.php?eid=<?= $rows["id"]?>"> <p title="Edit" class="fa fa-edit" style="color: black"></p></a>
+        <!-- <a href="viewbatch.php?q="> -->
+       <a href="edit_profile.php?eid=<?=$rows['id']?>"> <p title="Edit" class="fa fa-edit" style="color: black"></p></a>
       <!-- </a> -->
 				&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="userview.php?id=<?= $rows["id"]?>"> <p title="Delete" class="fa fa-times-circle" style="color: black"></p></a>
+				<a href="profileview.php?id=<?=$rows['id']?>"> <p title="Delete" class="fa fa-times-circle" style="color: black"></p></a>
 				
 			</td>
                             <?php $sn++; }

@@ -219,6 +219,7 @@
                 <li class="active"><a class="nav-link" href="index.php">User Registration</a></li>
                 <li><a class="nav-link" href="driverpassengerregister.php">Driver & Passenger </a></li>
                 <li><a class="nav-link" href="vehiclereg.php">Vehicle Registration </a></li>
+				  <li><a class="nav-link" href="userprofile.php">User Profile </a></li>
               </ul>
             </li>
 
@@ -228,6 +229,7 @@
                 <li class="active"><a class="nav-link" href="userview.php">Users</a></li>
                 <li><a class="nav-link" href="viewdriver.php">Driver</a></li>
                 <li><a class="nav-link" href="viewvehicle.php">Vehicle </a></li>
+				  <li><a class="nav-link" href="profileview.php">Profiles </a></li>
               </ul>
             </li>
             <li><a class="nav-link" href="widget.html"><i class="fas fa-boxes"></i><span>Widgets</span></a></li>
