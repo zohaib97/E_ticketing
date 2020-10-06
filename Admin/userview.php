@@ -119,7 +119,7 @@ include_once('header.php');
                             <th>First Name</th>
                             <th>Last Name</th>
                             <th>Email</th>
-                            <th>Password</th>
+                           
                             <th>Role</th>
                             <th>Action</th>
                             
@@ -137,12 +137,12 @@ include_once('header.php');
                                   <td><?php echo $rows["fname"]?></td>
                                   <td><?php echo $rows["lname"]?></td>
                                   <td><?php echo $rows["email"]?></td>
-                                  <td><?php echo $rows["pass"]?></td>
+                                
                                   <td><?php echo $rows["role"]?></td>
                                                             					
 				<td>
         <!-- <a href="viewbatch.php?q=<?php echo $rows["Batchid"]?>"> -->
-        <p title="Edit" class="fa fa-edit" style="color: black"></p>
+       <a href="edit_user.php?eid=<?= $rows["id"]?>"> <p title="Edit" class="fa fa-edit" style="color: black"></p></a>
       <!-- </a> -->
 				&nbsp;&nbsp;&nbsp;&nbsp;
 				<a href="userview.php?id=<?= $rows["id"]?>"> <p title="Delete" class="fa fa-times-circle" style="color: black"></p></a>
