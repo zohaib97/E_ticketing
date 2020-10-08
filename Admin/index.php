@@ -1,6 +1,7 @@
 <?php
-include( "connection/connect.php" );
 session_start ();
+include( "connection/connect.php" );
+
 require_once('auth.php');
 if(@$_POST["sub"])
 {

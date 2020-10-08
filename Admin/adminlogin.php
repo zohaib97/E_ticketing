@@ -1,5 +1,11 @@
 <?php
 session_start();
+include_once('config.php');
+include_once('fconfig.php');
+$redirectURL = "http://developer97.com/e-ticketing/E_ticketing/admin/fb-callback.php";
+	$permissions = ['email'];
+	$loginURL = $helper->getLoginUrl($redirectURL, $permissions);
+
 include("connection/connect.php");
 if(@$_POST["sub"])
 {
@@ -98,13 +104,13 @@ if(@$_POST["sub"])
                 </div>
                 <div class="row sm-gutters">
                   <div class="col-6">
-                    <a class="btn btn-block btn-social btn-facebook">
-                      <span class="fab fa-facebook"></span> Facebook
+                    <a href="<?php echo $client->createAuthUrl()?>" class="btn btn-block btn-social btn-google">
+                      <span class="fab fa-google"></span> Gmail
                     </a>
                   </div>
                   <div class="col-6">
-                    <a class="btn btn-block btn-social btn-twitter">
-                      <span class="fab fa-twitter"></span> Twitter
+                    <a href="<?php echo $loginURL ?>" class="btn btn-block btn-social btn-facebook">
+                      <span class="fab fa-facebook"></span> Facebook
                     </a>
                   </div>
                 </div>
