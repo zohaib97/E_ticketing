@@ -10,7 +10,7 @@ if(isset($_POST["sub"]))
     $pass=md5($_POST["pass"]);
     $role=$_POST["role"];
 
-    $query1=mysqli_query($con,"Select * from user where  email='$email'");
+    $query1=mysqli_query($con,"Select * from users where  email='$email'");
     $num_row=mysqli_num_rows($query1);
     if($num_row>0)
     {
@@ -19,7 +19,7 @@ if(isset($_POST["sub"]))
     
     else
     {
-	$query=mysqli_query($con,"insert into user(fname,lname,email,pass,role) values('$fname','$lname','$email','$pass','$role')");
+	$query=mysqli_query($con,"insert into users(fname,lname,email,pass,role) values('$fname','$lname','$email','$pass','$role')");
 	
 	if($query)
 	{
@@ -47,7 +47,7 @@ if(isset($_POST["sub"]))
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Grexsan - Admin Dashboard Template</title>
+  <title>E-Ticket | User Registration</title>
   <!-- General CSS Files -->
   <link rel="stylesheet" href="assets/css/app.min.css">
   <link rel="stylesheet" href="assets/bundles/jquery-selectric/selectric.css">

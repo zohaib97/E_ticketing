@@ -50,4 +50,5 @@ $('#tableExport').DataTable({
 			'copy', 'csv', 'excel', 'pdf', 'print'
 		]
 	});
+
 	

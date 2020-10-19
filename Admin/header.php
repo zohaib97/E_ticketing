@@ -193,7 +193,17 @@
 	                     <img src="https://png.pngitem.com/pimgs/s/112-1124333_e-ticket-logo-png-transparent-calligraphy-png-download.png" class="profile-img-circle box-center" alt="User Image">
 	                 </div>
 	                 <div class="siderbar-profile-details">
-	                     <div class="siderbar-profile-name"> <?php echo($_SESSION['username']) ?> </div>
+	                     <div class="siderbar-profile-name"> <?php 
+	                     
+	                     if(isset($_SESSION['userData']))
+	                     {
+	                     echo($_SESSION['userData']['first_name']) ;
+	                     }
+	                     else
+	                     {
+	                        echo $_SESSION['username'];
+	                     }
+	                     ?> </div>
 	                     <div class="siderbar-profile-position">Admin </div>
 	                 </div>
 	                 <div class="sidebar-profile-buttons">
@@ -217,6 +227,7 @@
               <a href="#" class="nav-link has-dropdown toggle"><i class="fas fa-desktop"></i><span>Registration</span></a>
               <ul class="dropdown-menu">
                 <li class="active"><a class="nav-link" href="index.php">User Registration</a></li>
+                <li class=""><a class="nav-link" href="add_country.php">Add Country/City</a></li>
                 <li><a class="nav-link" href="driverpassengerregister.php">Driver & Passenger </a></li>
                 <li><a class="nav-link" href="vehiclereg.php">Vehicle Registration </a></li>
 				  <li><a class="nav-link" href="userprofile.php">User Profile </a></li>
@@ -228,8 +239,11 @@
               <ul class="dropdown-menu">
                 <li class="active"><a class="nav-link" href="userview.php">Users</a></li>
                 <li><a class="nav-link" href="viewdriver.php">Driver</a></li>
+                <li><a class="nav-link" href="viewpassenger.php">Passenger</a></li>
                 <li><a class="nav-link" href="viewvehicle.php">Vehicle </a></li>
 				  <li><a class="nav-link" href="profileview.php">Profiles </a></li>
+				  <li><a class="nav-link" href="viewcountry.php">Countries/Cities</a></li>
+				  
               </ul>
             </li>
             <li><a class="nav-link" href="widget.html"><i class="fas fa-boxes"></i><span>Widgets</span></a></li>

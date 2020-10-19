@@ -52,7 +52,7 @@ if(isset($_POST["sub"]))
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>User Registration</title>
+  <title>E-Ticekt | Vehicle Registration</title>
   <!-- General CSS Files -->
   <link rel="stylesheet" href="assets/css/app.min.css">
   <!-- Template CSS -->
@@ -125,7 +125,7 @@ include_once('header.php');
                   
                   
                   <div class="form-group">
-                    <input type="submit" class="btn btn-primary" name="sub" value="Sign up" />
+                    <input type="submit" class="btn btn-primary" name="sub" value="Register" />
                   </div>
                 </form>
                 </div>

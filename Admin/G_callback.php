@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once('connection/connect.php');
 include_once('config.php');
 
 
@@ -16,6 +17,7 @@ if (isset($_GET['code']))
   $name =  $google_account_info->name;
 	 $picture =  $google_account_info->picture;
 	$_SESSION['username']=$name;
+	
 	header('location:index.php');
 }
 else

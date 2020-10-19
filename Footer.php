@@ -1,69 +1,124 @@
-<!DOCTYPE html>
 
-<footer class="footer black" role="contentinfo">
-		<div class="wrap">
-			<div class="row">
-				<!-- Column -->
-				<article class="one-half">
-					<h6>About us</h6>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
-				</article>
-				<!-- //Column -->
-				
-				<!-- Column -->
-				<article class="one-fourth">
-					<h6>Need help?</h6>
-					<p>Contact us via phone or email:</p>
-					<p class="contact-data"><span class="icon icon-themeenergy_call"></span> +1 555 555 555</p>
-					<p class="contact-data"><span class="icon icon-themeenergy_mail-2"></span> <a href="mailto:help@transfers.com">help@transfers.com</a></p>
-				</article>
-				<!-- //Column -->
-				
-				<!-- Column -->
-				<article class="one-fourth">
-					<h6>Follow us</h6>
-					<ul class="social">
-						<li><a href="#" title="facebook"><i class="fa fa-fw fa-facebook"></i></a></li>
-						<li><a href="#" title="twitter"><i class="fa fa-fw fa-twitter"></i></a></li>
-						<li><a href="#" title="gplus"><i class="fa fa-fw fa-google-plus"></i></a></li>
-						<li><a href="#" title="linkedin"><i class="fa fa-fw fa-linkedin"></i></a></li>
-						<li><a href="#" title="pinterest"><i class="fa fa-fw fa-pinterest-p"></i></a></li>
-						<li><a href="#" title="vimeo"><i class="fa fa-fw fa-vimeo"></i></a></li>
-					</ul>
-				</article>
-				<!-- //Column -->
-			</div>
-			
-			<div class="copy">
-				<p>Copyright 2016, Themeenergy. All rights reserved. </p>
-				
-				<nav role="navigation" class="foot-nav">
-					<ul>
-						<li><a href="#" title="Home">Home</a></li>
-						<li><a href="#" title="Blog">Blog</a></li>
-						<li><a href="#" title="About us">About us</a></li>
-						<li><a href="#" title="Contact us">Contact us</a></li>
-						<li><a href="#" title="Terms of use">Terms of use</a></li>
-						<li><a href="#" title="Help">Help</a></li>
-						<li><a href="#" title="For partners">For partners</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</footer>
-	<!-- //Footer -->
-	
-	 <!-- jQuery -->
-    <script src="ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<script src="ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-	<script src="cdn.jsdelivr.net/jquery.ui.timepicker.addon/1.4.5/jquery-ui-timepicker-addon.min.js"></script>
-	<script src="js/jquery.uniform.min.js"></script>
-	<script src="js/jquery.slicknav.min.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="js/jquery-ui-sliderAccess.js"></script>
-	<script src="js/search.js"></script>
-	<script src="js/scripts.js"></script>
-	
-	<!-- TEMPLATE STYLES -->
-	
-	<script src="js/styler.js"></script>
+  <!--====== FOOTER 1 ==========-->
+  <section>
+        <div class="rows">
+            <div class="footer1 home_title tb-space">
+                <div class="pla1 container">
+                    <!-- FOOTER OFFER 1 -->
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="disco">
+                            <h3>30%<span>OFF</span></h3>
+                            <h4>Eiffel Tower,Rome</h4>
+                            <p>valid only for 24th Dec</p> <a href="booking.php">Book Now</a> </div>
+                    </div>
+                    <!-- FOOTER OFFER 2 -->
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="disco1 disco">
+                            <h3>42%<span>OFF</span></h3>
+                            <h4>Colosseum,Burj Al Arab</h4>
+                            <p>valid only for 18th Nov</p> <a href="booking.php">Book Now</a> </div>
+                    </div>
+                    <!-- FOOTER MOST POPULAR VACATIONS -->
+                    <div class="col-md-6 col-sm-12 col-xs-12 foot-spec footer_places">
+                        <h4><span>Most Popular</span> Vacations</h4>
+                        <ul>
+                            <li><a href="tour-details.php">Angkor Wat</a> </li>
+                            <li><a href="tour-details.php">Buckingham Palace</a> </li>
+                            <li><a href="tour-details.php">High Line</a> </li>
+                            <li><a href="tour-details.php">Sagrada Família</a> </li>
+                            <li><a href="tour-details.php">Statue of Liberty </a> </li>
+                            <li><a href="tour-details.php">Notre Dame de Paris</a> </li>
+                            <li><a href="tour-details.php">Taj Mahal</a> </li>
+                            <li><a href="tour-details.php">The Louvre</a> </li>
+                            <li><a href="tour-details.php">Tate Modern, London</a> </li>
+                            <li><a href="tour-details.php">Gothic Quarter</a> </li>
+                            <li><a href="tour-details.php">Table Mountain</a> </li>
+                            <li><a href="tour-details.php">Bayon</a> </li>
+                            <li><a href="tour-details.php">Great Wall of China</a> </li>
+                            <li><a href="tour-details.php">Hermitage Museum</a> </li>
+                            <li><a href="tour-details.php">Yellowstone</a> </li>
+                            <li><a href="tour-details.php">Musée d'Orsay</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== FOOTER 2 ==========-->
+    <section>
+        <div class="rows">
+            <div class="footer">
+                <div class="container">
+                    <div class="foot-sec2">
+                        <div>
+                            <div class="row">
+                                <div class="col-sm-3 foot-spec foot-com">
+                                    <h4><span>Holiday</span> Tour & Travels</h4>
+                                    <p>World's leading tour and travels Booking website,Over 30,000 packages worldwide.</p>
+                                </div>
+                                <div class="col-sm-3 foot-spec foot-com">
+                                    <h4><span>Address</span> & Contact Info</h4>
+                                    <p>28800 Orchard Lake Road, Suite 180 Farmington Hills, U.S.A. Landmark : Next To Airport</p>
+                                    <p> <span class="strong">Phone: </span> <span class="highlighted">+101-1231-1231</span> </p>
+                                </div>
+                                <div class="col-sm-3 col-md-3 foot-spec foot-com">
+                                    <h4><span>SUPPORT</span> & HELP</h4>
+                                    <ul class="two-columns">
+                                        <li> <a href="#">About Us</a> </li>
+                                        <li> <a href="#">FAQ</a> </li>
+                                        <li> <a href="#">Feedbacks</a> </li>
+                                        <li> <a href="#">Blog </a> </li>
+                                        <li> <a href="#">Use Cases</a> </li>
+                                        <li> <a href="#">Advertise us</a> </li>
+                                        <li> <a href="#">Discount</a> </li>
+                                        <li> <a href="#">Vacations</a> </li>
+                                        <li> <a href="#">Branding Offers </a> </li>
+                                        <li> <a href="#">Contact Us</a> </li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-3 foot-social foot-spec foot-com">
+                                    <h4><span>Follow</span> with us</h4>
+                                    <p>Join the thousands of other There are many variations of passages of Lorem Ipsum available</p>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== FOOTER - COPYRIGHT ==========-->
+    <section>
+        <div class="rows copy">
+            <div class="container">
+                <p>Copyrights © 2018 Company Name. All Rights Reserved</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="icon-float">
+            <ul>
+                <li><a href="#" class="sh">1k <br> Share</a> </li>
+                <li><a href="#" class="fb1"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                <li><a href="#" class="gp1"><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
+                <li><a href="#" class="tw1"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+                <li><a href="#" class="li1"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
+                <li><a href="#" class="wa1"><i class="fa fa-whatsapp" aria-hidden="true"></i></a> </li>
+                <li><a href="#" class="sh1"><i class="fa fa-envelope-o" aria-hidden="true"></i></a> </li>
+            </ul>
+        </div>
+    </section>
+    <!--========= Scripts ===========-->
+    <script src="js/jquery-latest.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/custom.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

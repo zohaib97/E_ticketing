@@ -7,7 +7,7 @@ if(isset($_GET["id"]))
 {
 	$id=$_GET["id"];
 	
-	$query=mysqli_query($con,"delete from user where id='$id'");
+	$query=mysqli_query($con,"delete from users where id='$id'");
 	
 	if($query)
 	{
@@ -29,7 +29,7 @@ if(isset($_GET["id"]))
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>User Registration</title>
+  <title>E-Ticket | View User</title>
   <!-- General CSS Files -->
   <link rel="stylesheet" href="assets/css/app.min.css">
   <!-- Template CSS -->
@@ -128,9 +128,13 @@ include_once('header.php');
                         <tbody>
                         <?php
                             $sn=1;
-                            $query=mysqli_query($con,"select * from user  join role on user.role=role.rid");
+                            $query=mysqli_query($con,"select * from users  join role on users.role=role.rid");
                             while($rows=mysqli_fetch_array($query))
-                            { ?>
+                            {
+							
+							if($rows['role']=="user")
+							{
+							?>
                           <tr>
                            
                                   <td><?php echo $sn?></td>
@@ -148,7 +152,7 @@ include_once('header.php');
 				<a href="userview.php?id=<?= $rows["id"]?>"> <p title="Delete" class="fa fa-times-circle" style="color: black"></p></a>
 				
 			</td>
-                            <?php $sn++; }
+                            <?php $sn++; }}
                             ?>
                           </tr>
                          

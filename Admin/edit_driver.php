@@ -5,7 +5,7 @@ require_once('auth.php');
 if(isset($_POST["sub"]))
 {
 	$id= $_POST['id'];
-    $q1=mysqli_query($con,"SELECT * FROM driver WHERE id='$id'");
+    $q1=mysqli_query($con,"SELECT * FROM users WHERE id='$id'");
 	$re=mysqli_fetch_array($q1);
     $fname=$_POST["fname"];
     $lname=$_POST["lname"];
@@ -21,12 +21,13 @@ if(isset($_POST["sub"]))
     $adr=$_POST["adr"];
     $carno=$_POST["carno"];
     $lisence=$_POST["lisence"];
+    $lisencepic=$_POST["lisencepic"];
 
    
   
     
    
-        $query=mysqli_query($con,"UPDATE `driver` SET `lname`='$lname',`fname`='$fname',`email`='$email',`pass`='$pass',`role`='$role',`Contact`='$cnt',`address`='$adr',`carno`='$carno',`lisence`='$lisence' WHERE id='$id'");
+        $query=mysqli_query($con,"UPDATE `users` SET `lname`='$lname',`fname`='$fname',`email`='$email',`pass`='$pass',`role`='$role',`Contact`='$cnt',`address`='$adr',`carno`='$carno',`lisence`='$lisence' WHERE id='$id'");
 	
 	if($query)
 	{
@@ -114,7 +115,7 @@ include_once('header.php');
 				  {
 					  $id=$_GET['eid'];
 				 
-					  $q=mysqli_query($con,"SELECT * FROM `driver` WHERE id='$id'");
+					  $q=mysqli_query($con,"SELECT * FROM `users` WHERE id='$id'");
 					  while($row=mysqli_fetch_array($q))
 					  {
 				  ?>
@@ -200,7 +201,12 @@ include_once('header.php');
                       <input id="lisence" type="text" placeholder="Lisence" class="form-control" name="lisence" autofocus value="<?=$row['lisence']?>">
                     </div>
 
-                 
+                    <div class="form-group col-12" id="dlisencepic">
+                    <label for="lisencepic" class="d-block">License Pic</label>
+                                                                
+                   
+                      <input id="lisencepic" type="file" placeholder="Lisence" class="form-control" name="lisencepic" autofocus>
+					</div>
 
                   </div>
                   
@@ -333,7 +339,14 @@ fname: {
 				message: 'Please Enter your Lisence Number'
 			}
 		}
-	},
+  },
+//   lisencepic: {
+// 		validators: {
+// 			notEmpty: {
+// 				message: 'Please Select your Lisence Pic'
+// 			}
+// 		}
+// 	},
 	
 	}
 });

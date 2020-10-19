@@ -12,7 +12,7 @@ if(@$_POST["sub"])
     $pass=md5($_POST["pass"]);
     $role=$_POST["role"];
 
-    $query1=mysqli_query($con,"Select * from user where  email='$email'");
+    $query1=mysqli_query($con,"Select * from users where  email='$email'");
     $num_row=mysqli_num_rows($query1);
     if($num_row>0)
     {
@@ -21,7 +21,7 @@ if(@$_POST["sub"])
     
     else
     {
-	$query=mysqli_query($con,"insert into user(fname,lname,email,pass,role) values('$fname','$lname','$email','$pass','$role')");
+	$query=mysqli_query($con,"insert into users(fname,lname,email,pass,role) values('$fname','$lname','$email','$pass','$role')");
 	
 	if($query)
 	{
@@ -204,7 +204,7 @@ include_once('header.php');
                   </div>
                   
                   <div class="form-group">
-                    <input type="submit" class="btn btn-primary" name="sub" value="Sign up" />
+                    <input type="submit" class="btn btn-primary" name="sub" value="Register" />
                   </div>
                 </form>
                 </div>

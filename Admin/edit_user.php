@@ -8,7 +8,7 @@ if(isset($_POST["sub"]))
 {
 	$id= $_POST['id'];
     
-	$q1=mysqli_query($con,"SELECT * FROM user WHERE id='$id'");
+	$q1=mysqli_query($con,"SELECT * FROM users WHERE id='$id'");
 	$re=mysqli_fetch_array($q1);
     $fname=$_POST['fname'];
     $lname=$_POST['lname'];
@@ -22,7 +22,7 @@ if(isset($_POST["sub"]))
     $role=$_POST['role'];
    
 
-         $query=mysqli_query($con,"UPDATE `user` SET `fname`='$fname',`lname`='$lname',`email`='$email',`pass`='$pass',`role`='$role' WHERE id='$id'
+         $query=mysqli_query($con,"UPDATE `users` SET `fname`='$fname',`lname`='$lname',`email`='$email',`pass`='$pass',`role`='$role' WHERE id='$id'
          ");
         
         if($query)
@@ -162,7 +162,7 @@ include_once('header.php');
 				 if(isset($_GET['eid']))
 				 {
 				  $id= $_GET['eid'];
-				  $q="SELECT * FROM user WHERE id ='$id'";
+				  $q="SELECT * FROM users WHERE id ='$id'";
 				  $r=mysqli_query($con,$q);
 				  $row=mysqli_fetch_array($r);
 				  ?>
@@ -224,7 +224,7 @@ include_once('header.php');
 			  ?>
                   
                   <div class="form-group">
-                    <input type="submit" class="btn btn-primary" name="sub" value="Sign up" />
+                    <input type="submit" class="btn btn-primary" name="sub" value="Update" />
                   </div>
                 </form>
                 </div>

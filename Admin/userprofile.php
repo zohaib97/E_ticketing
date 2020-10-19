@@ -41,7 +41,7 @@ if(isset($_POST["sub"]))
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>User Registration</title>
+  <title>E-Ticket | User Profile</title>
   <!-- General CSS Files -->
   <link rel="stylesheet" href="assets/css/app.min.css">
   <!-- Template CSS -->
@@ -147,7 +147,7 @@ include_once('header.php');
           <br><br>
           <div class="section-body"  style="background:white">
           <div class="card-header card-header-auth">
-                <h4>User Registration</h4>
+                <h4>User Profile</h4>
               </div>
                <div class="card-body">
                 <form id="validateForm" method="post" enctype="multipart/form-data" >

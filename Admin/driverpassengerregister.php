@@ -14,8 +14,11 @@ if(isset($_POST["sub"]))
     $adr=$_POST["adr"];
     $carno=$_POST["carno"];
     $lisence=$_POST["lisence"];
+    $lisencepic = $_FILES['lisencepic']['name']; 
+    $imagetmp = $_FILES['lisencepic']['tmp_name']; 
+  $uploadfile = move_uploaded_file($imagetmp,"../images/".$lisencepic);
 
-    $query1=mysqli_query($con,"Select * from driver where  email='$email' and Contact='$cnt'  and carno='$carno' and lisence='$lisence'");
+    $query1=mysqli_query($con,"Select * from users where  email='$email' and Contact='$cnt'  and carno='$carno' and lisence='$lisence'");
     $num_row=mysqli_num_rows($query1);
     if($num_row>0)
     {
@@ -40,7 +43,7 @@ if(isset($_POST["sub"]))
     
     else
     {
-        $query=mysqli_query($con,"insert into driver (fname,lname,email,pass,role,Contact,address,carno,lisence) values('$fname','$lname','$email','$pass','$role','$cnt','$adr','$carno','$lisence')");
+        $query=mysqli_query($con,"insert into users (fname,lname,email,pass,role,Contact,address,carno,lisence,lisencepic) values('$fname','$lname','$email','$pass','$role','$cnt','$adr','$carno','$lisence','$lisencepic')");
 	
 	if($query)
 	{
@@ -68,7 +71,7 @@ if(isset($_POST["sub"]))
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Driver Registration</title>
+  <title>E-Ticket | Driver & Passenger Registration</title>
   <!-- General CSS Files -->
   <link rel="stylesheet" href="assets/css/app.min.css">
   <!-- Template CSS -->
@@ -99,6 +102,18 @@ if(isset($_POST["sub"]))
 		.help-block{
 			color: red;
 		}
+    #dcar
+    {
+      display: none;
+    }
+    #dlisence
+    {
+      display: none;
+    }
+    #dlisencepic
+    {
+      display: none;
+    }
 		
   </style>
 </head>
@@ -123,15 +138,15 @@ include_once('header.php');
                 <h4>Driver & Passenger Registration</h4>
               </div>
               <div class="card-body"> 
-          <form id="validateForm" method="post" >
+          <form id="validateForm" method="post" enctype="multipart/form-data">
                   <div class="row">
                     <div class="form-group col-6">
                       <label for="frist_name">First Name</label>
-                      <input id="frist_name" type="text" class="form-control" name="fname" autofocus>
+                      <input id="fname" type="text" class="form-control" name="fname" autofocus>
                     </div>
                     <div class="form-group col-6">
                       <label for="last_name">Last Name</label>
-                      <input id="last_name" type="text" class="form-control" name="lname">
+                      <input id="lname" type="text" class="form-control" name="lname">
                     </div>
                   </div>
                   <div class="form-group">
@@ -139,6 +154,7 @@ include_once('header.php');
                     <input id="email" type="email" class="form-control" name="email">
                     
                   </div>
+                 
                   <div class="row">
                     <div class="form-group col-6">
                       <label for="pass" class="d-block">Password</label>
@@ -155,7 +171,7 @@ include_once('header.php');
 					<?php
 					$query = mysqli_query( $con, "select * from role" );
 					while ( $rows = mysqli_fetch_array( $query ) ) {
-                      if($rows['role'] == 'driver' || $rows['role'] == 'passsenger') { ?>
+                      if($rows['role'] == 'driver' || $rows['role'] == 'passenger') { ?>
 					<option value="<?=$rows["rid"]?>">
 						<?php echo $rows["role"]?>
 					</option>
@@ -183,26 +199,33 @@ include_once('header.php');
 
                  
                     
-                    <div class="form-group col-6">
+                    <div class="form-group col-6" id="dcar">
                     <label for="carno">Car No.</label>
                                                                 
                     
                       <input id="carno" type="text" class="form-control" name="carno"  placeholder="Car Number"/>
                     </div>
 
-                    <div class="form-group col-6">
+                    <div class="form-group col-6" id="dlisence">
                     <label for="lisence">License</label>
                                                                 
                    
                       <input id="lisence" type="text" placeholder="Lisence" class="form-control" name="lisence" autofocus>
                     </div>
 
+                    <div class="form-group col-12" id="dlisencepic">
+                    <label for="lisencepic" class="d-block">License Pic</label>
+                                                                
+                   
+                      <input id="lisencepic" type="file" placeholder="Lisence" class="form-control" name="lisencepic" autofocus>
+					</div>
+
                  
 
                   </div>
                   
                   <div class="form-group">
-                    <input type="submit" class="btn btn-primary" name="sub" value="Sign up" />
+                    <input type="submit" class="btn btn-primary" name="sub" value="Register" />
                   </div>
                 </form>
                 </div>
@@ -223,6 +246,9 @@ include_once('header.php');
       
     </div>
   </div>
+                      </div>
+                      </div>
+
   <!-- General JS Scripts -->
   <script src="assets/js/app.min.js"></script>
   <!-- JS Libraies -->
@@ -328,6 +354,13 @@ fname: {
 				message: 'Please Enter your Lisence Number'
 			}
 		}
+  },
+  lisencepic: {
+		validators: {
+			notEmpty: {
+				message: 'Please Select your Lisence Pic'
+			}
+		}
 	},
 	
 	}
@@ -345,3 +378,29 @@ fname: {
         // {
         //     echo "<script>   alert ('This Lisence Already Exist Please Provide Another Lisence')</script>";
         // } -->
+        <script>
+
+$('#role').on('change',function(){
+  var role= $('#role').val();
+            if(role==1)
+            {
+              $('#dcar').show();
+              $('#dlisence').show();
+              $('#dlisencepic').show();
+
+            }
+            else
+            {
+              if(role==2)
+            {
+              $('#dcar').hide();
+              $('#dlisence').hide();
+              $('#dlisencepic').hide();
+
+            }
+            }
+
+});
+
+
+          </script>

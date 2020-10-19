@@ -1,239 +1,171 @@
 <!DOCTYPE html>
-<html>
-  
-
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="keywords" content="Transfers - Private Transport and Car Hire HTML Template" />
-	<meta name="description" content="Transfers - Private Transport and Car Hire HTML Template">
-	<meta name="author" content="themeenergy.com">
-	
-	<title>Transfers - Blog</title>
-	
-	<link rel="stylesheet" href="css/styler.css" />
-	<link rel="stylesheet" href="css/theme-pink.css" id="template-color" />
-	<link rel="stylesheet" href="css/style.css" />
-	<link rel="stylesheet" href="css/animate.css" />
-	<link rel="stylesheet" href="css/icons.css" />
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,500,600,700|Montserrat:400,700">
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<script src="../../../../use.fontawesome.com/e808bf9397.js"></script>
+    <title>The Travel - Tour Travel</title>
+ 
+</head>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  
-  <body>
-	<!-- Preloader -->
-	<div class="preloader">
-		<div id="followingBallsG">
-			<div id="followingBallsG_1" class="followingBallsG"></div>
-			<div id="followingBallsG_2" class="followingBallsG"></div>
-			<div id="followingBallsG_3" class="followingBallsG"></div>
-			<div id="followingBallsG_4" class="followingBallsG"></div>
+<body>
+<?php
+include_once('header.php');
+?>
+   
+    <section>
+     
+
+     
+		
+		<!-- TOP SEARCH BOX -->
+        <div class="search-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="search-form">
+						<form class="tourz-search-form">
+							<div class="input-field">
+								<input type="text" id="select-city" class="autocomplete">
+								<label for="select-city">Enter city</label>
+							</div>
+							<div class="input-field">
+								<input type="text" id="select-search" class="autocomplete">
+								<label for="select-search" class="search-hotel-type">Search over a million tour and travels, sight seeings, hotels and more</label>
+							</div>
+							<div class="input-field">
+								<input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn"> </div>
+						</form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!-- END TOP SEARCH BOX -->
+    </section>
+    <!--END HEADER SECTION-->
+	
+	<!--====== BANNER ==========-->
+	<section>
+		<div class="rows inner_banner inner_banner_1">
+			<div class="container">
+				<h2><span>Best Tour -</span> Packages in your City</h2>
+				<ul>
+					<li><a href="#inner-page-title">Home</a> </li>
+					<li><i class="fa fa-angle-right" aria-hidden="true"></i> </li>
+					<li><a href="#inner-page-title" class="bread-acti">Blog Posts</a> </li>
+				</ul>
+				<p>Book travel packages and enjoy your holidays with distinctive experience</p>
+			</div>
 		</div>
-	</div>
-	<!-- //Preloader -->
-	
-    <!-- Header -->
-	<?php
-	include_once('Header.php');
-	?>
-	<!-- //Header -->
-	
-	<!-- Main -->
-	<main class="main" role="main">
-		<!-- Page info -->
-		<header class="site-title color">
-			<div class="wrap">
-				<div class="container">
-					<h1>Blog</h1>
-					<nav role="navigation" class="breadcrumbs">
+	</section>
+	<!--====== ALL POST ==========-->
+	<section>
+		<div class="rows inn-page-bg com-colo">
+			<div class="container inn-page-con-bg tb-space pad-bot-redu-5" id="inner-page-title">
+				<!-- TITLE & DESCRIPTION -->
+				<div class="spe-title col-md-12">
+					<h2>Holiday Tour <span>Blog</span> Posts</h2>
+					<div class="title-line">
+						<div class="tl-1"></div>
+						<div class="tl-2"></div>
+						<div class="tl-3"></div>
+					</div>
+					<p>World's leading tour and travels Booking website,Over 30,000 packages worldwide. Book travel packages and enjoy your holidays with distinctive experience</p>
+				</div>
+				<!--===== POSTS ======-->
+				<div class="rows">
+					<div class="posts">
+						<div class="col-md-6 col-sm-6 col-xs-12"> <img src="images/iplace-6.jpg" alt="" /> </div>
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<h3>Thai island hopper east</h3>
+							<h5><span class="post_author">Author: Johnson</span><span class="post_date">Date: 12th May,2016</span><span class="post_city">City: Illunois</span></h5>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+							<p>Randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p> <a href="blog-inner.html" class="link-btn">Read more</a> </div>
+					</div>
+					<div class="posts">
+						<div class="col-md-6 col-sm-6 col-xs-12"> <img src="images/iplace-2.jpg" alt="" /> </div>
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<h3>We are Offering the hottest offers</h3>
+							<h5><span class="post_author">Author: Johnson</span><span class="post_date">Date: 12th May,2016</span><span class="post_city">City: Illunois</span></h5>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+							<p>Randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p> <a href="blog-inner.html" class="link-btn">Read more</a> </div>
+					</div>
+					<div class="posts">
+						<div class="col-md-6 col-sm-6 col-xs-12"> <img src="images/iplace-3.jpg" alt="" /> </div>
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<h3>Lorem ipsum dummy content</h3>
+							<h5><span class="post_author">Author: Johnson</span><span class="post_date">Date: 12th May,2016</span><span class="post_city">City: Illunois</span></h5>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+							<p>Randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p> <a href="blog-inner.html" class="link-btn">Read more</a> </div>
+					</div>
+					<div class="posts">
+						<div class="col-md-6 col-sm-6 col-xs-12"> <img src="images/iplace-4.jpg" alt="" /> </div>
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<h3>Lorem ipsum dummy content</h3>
+							<h5><span class="post_author">Author: Johnson</span><span class="post_date">Date: 12th May,2016</span><span class="post_city">City: Illunois</span></h5>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+							<p>Randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p> <a href="blog-inner.html" class="link-btn">Read more</a> </div>
+					</div>
+				</div>
+				<!--===== POST END ======-->
+			</div>
+		</div>
+	</section>
+	<!--====== TIPS BEFORE TRAVEL ==========-->
+	<section>
+		<div class="rows tips tips-home tb-space home_title">
+			<div class="container tips_1">
+				<!-- TIPS BEFORE TRAVEL -->
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<h3>Tips Before Travel</h3>
+					<div class="tips_left tips_left_1">
+						<h5>Bring copies of your passport</h5>
+						<p>Aliquam pretium id justo eget tristique. Aenean feugiat vestibulum blandit.</p>
+					</div>
+					<div class="tips_left tips_left_2">
+						<h5>Register with your embassy</h5>
+						<p>Mauris efficitur, ante sit amet rhoncus malesuada, orci justo sollicitudin.</p>
+					</div>
+					<div class="tips_left tips_left_3">
+						<h5>Always have local cash</h5>
+						<p>Donec et placerat ante. Etiam et velit in massa. </p>
+					</div>
+				</div>
+				<!-- CUSTOMER TESTIMONIALS -->
+				<div class="col-md-8 col-sm-6 col-xs-12 testi-2">
+					<!-- TESTIMONIAL TITLE -->
+					<h3>Customer Testimonials</h3>
+					<div class="testi">
+						<h4>John William</h4>
+						<p>Ut sed sem quis magna ultricies lacinia et sed tortor. Ut non tincidunt nisi, non elementum lorem. Aliquam gravida sodales</p> <address>Illinois, United States of America</address> </div>
+					<!-- ARRANGEMENTS & HELPS -->
+					<h3>Arrangement & Helps</h3>
+					<div class="arrange">
 						<ul>
-							<li><a href="index.html" title="Home">Home</a></li>
-							<li>Blog</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</header>
-		<!-- //Page info -->
-		
-		
-		<div class="wrap">
-			<div class="row">
-				<!--- Content -->
-				<div class="three-fourth content">
-					<div class="row">
-						<!-- Post -->
-						<div class="full-width">
-							<article class="hentry">
-								<div class="entry-featured">
-									<img src="images/uploads/img2.jpg" alt="" />
-									<div class="overlay">
-										<a href="blog-single.html" class="expand">+</a>
-									</div>
-								</div>
-								<div class="entry-content">
-									<h2><a href="blog-single.html">Best scenic roads in Europe</a></h2>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis. </p>
-									<a href="blog-single.html" title="Read more" class="more">Read more</a>
-								</div>
-							</article>
-						</div>
-						<!-- //Post -->
-						
-						<!-- Post -->
-						<div class="full-width">
-							<article class="hentry">
-								<div class="entry-featured">
-									<img src="images/uploads/img3.jpg" alt="" />
-									<div class="overlay">
-										<a href="blog-single.html" class="expand">+</a>
-									</div>
-								</div>
-								<div class="entry-content">
-									<h2><a href="blog-single.html">Top 25 summer road trips</a></h2>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis. </p>
-									<a href="blog-single.html" title="Read more" class="more">Read more</a>
-								</div>
-							</article>
-						</div>
-						<!-- //Post -->
-						
-						<!-- Post -->
-						<div class="full-width">
-							<article class="hentry">
-								<div class="entry-featured">
-									<img src="images/uploads/img4.jpg" alt="" />
-									<div class="overlay">
-										<a href="blog-single.html" class="expand">+</a>
-									</div>
-								</div>
-								<div class="entry-content">
-									<h2><a href="blog-single.html">Top 10 cities to explore in 2015</a></h2>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis. </p>
-									<a href="blog-single.html" title="Read more" class="more">Read more</a>
-								</div>
-							</article>
-						</div>
-						<!-- //Post -->
-						
-						<!-- Post -->
-						<div class="full-width">
-							<article class="hentry">
-								<div class="entry-featured">
-									<img src="images/uploads/img.jpg" alt="" />
-									<div class="overlay">
-										<a href="blog-single.html" class="expand">+</a>
-									</div>
-								</div>
-								<div class="entry-content">
-									<h2><a href="blog-single.html">Car review: Mercedes - Benz CLA</a></h2>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis. </p>
-									<a href="blog-single.html" title="Read more" class="more">Read more</a>
-								</div>
-							</article>
-						</div>
-						<!-- //Post -->
-						
-						<!-- Post -->
-						<div class="full-width">
-							<article class="hentry">
-								<div class="entry-featured">
-									<img src="images/uploads/img5.jpg" alt="" />
-									<div class="overlay">
-										<a href="blog-single.html" class="expand">+</a>
-									</div>
-								</div>
-								<div class="entry-content">
-									<h2><a href="blog-single.html">Be prepared. Don't get stuck.</a></h2>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis. </p>
-									<a href="blog-single.html" title="Read more" class="more">Read more</a>
-								</div>
-							</article>
-						</div>
-						<!-- //Post -->
-						
-						<!-- Post -->
-						<div class="full-width">
-							<article class="hentry">
-								<div class="entry-featured">
-									<img src="images/uploads/germany.jpg" alt="" />
-									<div class="overlay">
-										<a href="blog-single.html" class="expand">+</a>
-									</div>
-								</div>
-								<div class="entry-content">
-									<h2><a href="blog-single.html">Explore German castles</a></h2>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis. </p>
-									<a href="blog-single.html" title="Read more" class="more">Read more</a>
-								</div>
-							</article>
-						</div>
-						<!-- //Post -->
-					</div>
-					
-					<!-- Pager -->
-					<div class="pager">
-						<a href="#">1</a>
-						<a href="#" class="current color">2</a>
-						<a href="#">3</a>
-						<a href="#">4</a>
-						<a href="#">5</a>
-					</div>
-					<!-- //Pager -->
-				</div>
-				<!--- //Content -->
-				
-				<!--- Sidebar -->
-				<aside class="one-fourth sidebar right">
-					<!-- Widget -->
-					<div class="widget">
-						<ul class="categories">
-							<li><a href="#">Blog categories</a></li>
-							<li class="active"><a href="#">Lorem ipsum</a></li>
-							<li><a href="#">Category name</a></li>
-							<li><a href="#">Lorem ipsum</a></li>
-							<li><a href="#">Dolor</a></li>
-							<li><a href="#">Sit amet</a></li>
+							<!-- LOCATION MANAGER -->
+							<li>
+								<a href="#"><img src="images/Location-Manager.png" alt=""> </a>
+							</li>
+							<!-- PRIVATE GUIDE -->
+							<li>
+								<a href="#"><img src="images/Private-Guide.png" alt=""> </a>
+							</li>
+							<!-- ARRANGEMENTS -->
+							<li>
+								<a href="#"><img src="images/Arrangements.png" alt=""> </a>
+							</li>
+							<!-- EVENT ACTIVITIES -->
+							<li>
+								<a href="#"><img src="images/Events-Activities.png" alt=""> </a>
+							</li>
 						</ul>
 					</div>
-					<!-- //Widget -->
-					
-					<!-- Widget -->
-					<div class="widget">
-						<h4>Advertisment</h4>
-						<a href="#"><img src="images/uploads/advertisment.jpg" alt="" /></a>
-					</div>
-					<!-- //Widget -->
-					
-					<!-- Widget -->
-					<div class="widget">
-						<h4>Need help booking?</h4>
-						<div class="textwidget">
-							<p>Call our customer services team on the number below to speak to one of our advisors who will help you with all of your needs.</p>
-							<p class="contact-data"><span class="icon icon-themeenergy_call black"></span> +1 555 555 555</p>
-						</div>
-					</div>
-					<!-- //Widget -->
-				</aside>
-				<!--- //Sidebar -->
+				</div>
 			</div>
 		</div>
-	</main>
-	<!-- //Main -->
-	
-	<!-- Footer -->
-	<?php
-	include_once('Footer.php');
-	?>
-  </body>
+	</section>
+	<!--====== FOOTER 1 ==========-->
+    <?php
+include_once('footer.php');
+?>
+</body>
 
-<!-- Mirrored from themeenergy.com/themes/html/transfers/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Oct 2020 10:02:01 GMT -->
 </html>

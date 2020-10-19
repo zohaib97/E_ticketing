@@ -2,7 +2,7 @@
 session_start();
 include_once('config.php');
 include_once('fconfig.php');
-$redirectURL = "http://developer97.com/e-ticketing/E_ticketing/admin/fb-callback.php";
+$redirectURL = "http://e-ticketing.extremeearn.com/Admin/fb-callback.php";
 	$permissions = ['email'];
 	$loginURL = $helper->getLoginUrl($redirectURL, $permissions);
 
@@ -109,7 +109,7 @@ if(@$_POST["sub"])
                     </a>
                   </div>
                   <div class="col-6">
-                    <a href="<?php echo $loginURL ?>" class="btn btn-block btn-social btn-facebook">
+                    <a href="<?php echo $loginURL?>" class="btn btn-block btn-social btn-facebook">
                       <span class="fab fa-facebook"></span> Facebook
                     </a>
                   </div>

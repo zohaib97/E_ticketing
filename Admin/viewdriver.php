@@ -7,7 +7,7 @@ if(isset($_GET["did"]))
 {
 	$id=$_GET["did"];
 	
-	$query=mysqli_query($con,"delete from driver where id='$id'");
+	$query=mysqli_query($con,"delete from users where id='$id'");
 	
 	if($query)
 	{
@@ -29,7 +29,7 @@ if(isset($_GET["did"]))
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>User Registration</title>
+  <title>E-Ticket | View Driver</title>
  <!-- General CSS Files -->
   <link rel="stylesheet" href="assets/css/app.min.css">
   <!-- Template CSS -->
@@ -105,7 +105,7 @@ include_once('header.php');
               <div class="col-12">
                 <div class="card">
                   <div class="card-header">
-                    <h4>Users</h4>
+                    <h4>View  Driver</h4>
                   </div>
                   <div class="card-body">
                     <div class="table-responsive">
@@ -121,7 +121,9 @@ include_once('header.php');
                             <th>Contact</th>
                             <th>Address</th>
                             <th>Car No.</th>
-                            <th>lisense</th>
+                            <th>Lisense</th>
+                            <th>Lisense Pic</th>
+                            <th>Status</th>
                             <th>Action</th>
                             
                           </tr>
@@ -129,9 +131,10 @@ include_once('header.php');
                         <tbody>
                         <?php
                             $sn=1;
-                            $query=mysqli_query($con,"select * from driver  join role on driver.role=role.rid");
+                            $query=mysqli_query($con,"select * from users  join role on users.role=role.rid ORDER BY id desc");
                             while($rows=mysqli_fetch_array($query))
-                            { ?>
+                            {
+                              if($rows['role'] == 'driver' ) {  ?>
                           <tr>
                            
                                   <td><?php echo $sn?></td>
@@ -143,17 +146,47 @@ include_once('header.php');
                                   <td><?php echo $rows["Contact"]?></td>
                                   <td><?php echo $rows["address"]?></td>
                                   <td><?php echo $rows["carno"]?></td>
+                                 
                                   <td><?php echo $rows["lisence"]?></td>
+                                  <td>
+                                    
+                                  <img height="70" width="70" class="rounded rounded-circle" src="../images/<?php echo $rows["lisencepic"]?>"></td>
+                                
+                                  <td>		<form action="saveinfo.php" method="post">
+							<?php
+              $output ='';
+							$status=$rows['status'];
+							if ($status =='Approve') {
+							
+						$output.='
+								<input type="hidden" value="'.$rows["id"].'" name="appid">
+							 <button type="submit" name="approve" class="btn-sm" style="background:linear-gradient(to right, #04ACF7 , #13C8D9); border:none; color:white;">'.$status.'</button>';
+						
+							}
+							elseif ($status =='Not Approve') {
+								$output.='
+								<input type="hidden" value="'.$rows["id"].'" name="appid">
+							 <button type="submit" name="notapprove" class="btn-sm" style="background:linear-gradient(to right, #FF0000 , #ff4d4d); border:none; color:white;">'.$status.'</button>
+								';
+							}
+          echo $output;
+					
+            ?>
+            </form>
+
+						</td>
                                                             					
 				<td>
         <!-- <a href="viewbatch.php?q=<?php// echo $rows["Batchid"]?>"> -->
        <a href="edit_driver.php?eid=<?php echo $rows["id"]?>">  <p title="Edit" class="fa fa-edit" style="color: black"></p></a>
       <!-- </a> -->
-				&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;
 				<a href="viewdriver.php?did=<?php echo $rows["id"]?>"> <p title="Delete" class="fa fa-times-circle" style="color: black"></p></a>
-				
+        &nbsp;&nbsp;
+        <a href="detail.php?eid=<?php echo $rows["id"]?>"><i title="Detail" class="fa fa-info-circle" style="color: black"></i></a>
 			</td>
                             <?php $sn++;}
+                            }
                             ?>
                           </tr>
                          
@@ -210,7 +243,6 @@ include_once('header.php');
 
 <!-- Mirrored from radixtouch.in/templates/snkthemes/grexsan/source/light/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Sep 2020 09:58:56 GMT -->
 </html>
-<
 
 
 
